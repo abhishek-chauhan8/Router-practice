@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
-  return (
-    <div>This is contact page</div>
-  )
-}
 
-export default Contact
+  const navigate = useNavigate();
+
+  function clickHandler(){
+    navigate(-1);
+  }
+  return (
+    <div>
+      <div>This is contact page</div>
+      <button onClick={clickHandler}>Click to go Courses</button>
+    </div>
+  );
+};
+
+export default Contact;

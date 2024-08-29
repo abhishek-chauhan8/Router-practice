@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Courses = () => {
-  return (
-    <div>This is courses page</div>
-  )
-}
+  const navigate = useNavigate();
 
-export default Courses
+  function clickHandler(){
+    navigate("/contact");
+  }
+  return (
+    <div>
+      <div>This is courses page</div>
+      <button onClick={clickHandler}>
+        Click to go contact
+      </button>
+    </div>
+  );
+};
+
+export default Courses;
